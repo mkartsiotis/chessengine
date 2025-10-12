@@ -5,34 +5,27 @@ import time
 import chess
 import chess.engine
 import asyncio
-import pyttsx3 # Import for text-to-speech
+import pyttsx3 
 
-# --- Calibration File Paths ---
 CAMERA_MATRIX_FILE = "camera_matrix.npy"
 DIST_COEFFS_FILE = "dist_coeffs.npy"
 
-# Global variables for calibration and piece detection
 camera_matrix = None
 dist_coeffs = None
 
-# --- CONSTANTS FOR PIECE TYPES ---
 EMPTY_SQUARE = 0
 PLAYER_1_PIECE = 1 # Representing PHYSICAL RED pieces (which are CHESS BLACK)
 PLAYER_2_PIECE = 2 # Representing PHYSICAL YELLOW pieces (which are CHESS WHITE)
 
-# --- HSV RANGES FOR TWO COLORS ---
-# Red (typical range, might need adjustment for your lighting/camera)
-# Note: Red wraps around in HSV, so often needs two ranges
 lower_red1 = np.array([0, 70, 70])
 upper_red1 = np.array([10, 255, 255])
 lower_red2 = np.array([170, 70, 70]) # Second range for wrapping red
 upper_red2 = np.array([180, 255, 255])
 
-# Yellow (typical range, **UPDATED WITH YOUR CALIBRATED VALUES**)
 lower_yellow = np.array([30, 70, 70])
 upper_yellow = np.array([60, 255, 255])
 
-# --- PIXEL THRESHOLDS FOR DETECTION ---
+
 red_pixel_threshold = 15
 yellow_pixel_threshold = 90 # Updated as requested
 
@@ -593,3 +586,4 @@ async def capture_live_video_feed():
 
 if __name__ == "__main__":
     asyncio.run(capture_live_video_feed())
+
