@@ -5,7 +5,7 @@ Play a real, physical game of chess against **Stockfish** using nothing but a we
 > Move a real piece → the camera sees the change → the engine validates and replies → your speakers tell you what to play next.
 
 ---
-
+![Image](https://github.com/mkartsiotis/chessengine/blob/main/20250715_142724.jpg)
 ## Table of Contents
 
 - [Overview](#overview)
