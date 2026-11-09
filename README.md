@@ -120,8 +120,6 @@ cd chessengine
 | `camera_matrix.npy`, `dist_coeffs.npy` | Saved calibration output (camera-specific — regenerate for your own setup) |
 | `dwsasa.py`, `frrsxgfgh.py`, `sdfghjk.py`, `skdjd.py`, `scanscanscan.py` | Development/exploration scripts from earlier iterations |
 
-> **Suggested cleanup:** the exploratory scripts have placeholder names left over from development. Moving them into an `experiments/` folder (or removing the ones that are fully superseded by `chesscam.py`) would make the repo read a lot cleaner for anyone browsing it.
-
 ## Configuration
 
 Key tunables live at the top of `chesscam.py`:
